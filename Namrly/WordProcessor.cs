@@ -12,7 +12,7 @@ namespace Namrly
         {
             var r = new Random();
             var result = await RandomWordProxy.GetRandomWord(r.Next(0, 15));
-            var suffix = (Suffixes)r.Next(1, 3);
+            var suffix = (Suffixes)r.Next(0, 2);
 
             return result + suffix;
         }
