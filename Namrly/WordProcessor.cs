@@ -22,6 +22,7 @@ namespace Namrly
     {
         ly,
         r,
-        bits
+        bits,
+        poop
     }
 }
