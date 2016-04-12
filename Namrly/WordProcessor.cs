@@ -8,11 +8,21 @@ namespace Namrly
 {
     public class WordProcessor
     {
-        public static async Task<string> GetRandomProductName()
+        public static string GetRandomProductName(bool includeImmatureSuffixes)
         {
             var r = new Random();
-            var result = await RandomWordProxy.GetRandomWord(r.Next(0, 15));
-            var suffix = (Suffixes)r.Next(0, Enum.GetNames(typeof(Suffixes)).Length);
+            var result = RandomWordProxy.GetRandomWord(r.Next(0, 15));
+            Suffixes suffix;
+            
+            if (includeImmatureSuffixes && r.Next(0, 1) == 1)
+            {
+                // Be Immature
+                suffix = (Suffixes)r.Next(0, Enum.GetNames(typeof(ImmatureSuffixes)).Length);
+            }
+            else
+            {
+                suffix = (Suffixes)r.Next(0, Enum.GetNames(typeof(Suffixes)).Length);
+            }
 
             return result + suffix;
         }
@@ -23,6 +33,10 @@ namespace Namrly
         ly,
         r,
         bits,
+    }
+
+    enum ImmatureSuffixes
+    {
         poop
     }
 }

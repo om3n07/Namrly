@@ -34,3 +34,40 @@
 \\mi\dfs\users\mmartell\documents\visual studio 2015\Projects\Namrly\Namrly\bin\System.Web.Http.WebHost.xml
 \\mi\dfs\users\mmartell\documents\visual studio 2015\Projects\Namrly\Namrly\obj\Release\Namrly.dll
 \\mi\dfs\users\mmartell\documents\visual studio 2015\Projects\Namrly\Namrly\obj\Release\Namrly.pdb
+C:\GitHub\Namrly\Namrly\bin\roslyn\csc.exe
+C:\GitHub\Namrly\Namrly\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\GitHub\Namrly\Namrly\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\GitHub\Namrly\Namrly\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\GitHub\Namrly\Namrly\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\GitHub\Namrly\Namrly\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\GitHub\Namrly\Namrly\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\GitHub\Namrly\Namrly\bin\roslyn\System.Collections.Immutable.dll
+C:\GitHub\Namrly\Namrly\bin\roslyn\System.Reflection.Metadata.dll
+C:\GitHub\Namrly\Namrly\bin\roslyn\vbc.exe
+C:\GitHub\Namrly\Namrly\bin\roslyn\VBCSCompiler.exe
+C:\GitHub\Namrly\Namrly\bin\roslyn\VBCSCompiler.exe.config
+C:\GitHub\Namrly\Namrly\bin\Namrly.dll.config
+C:\GitHub\Namrly\Namrly\bin\Namrly.dll
+C:\GitHub\Namrly\Namrly\bin\Namrly.pdb
+C:\GitHub\Namrly\Namrly\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+C:\GitHub\Namrly\Namrly\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\GitHub\Namrly\Namrly\bin\Microsoft.Web.Infrastructure.dll
+C:\GitHub\Namrly\Namrly\bin\Newtonsoft.Json.dll
+C:\GitHub\Namrly\Namrly\bin\Swashbuckle.Core.dll
+C:\GitHub\Namrly\Namrly\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\GitHub\Namrly\Namrly\bin\System.Net.Http.Formatting.dll
+C:\GitHub\Namrly\Namrly\bin\System.Web.Cors.dll
+C:\GitHub\Namrly\Namrly\bin\System.Web.Http.Cors.dll
+C:\GitHub\Namrly\Namrly\bin\System.Web.Http.dll
+C:\GitHub\Namrly\Namrly\bin\System.Web.Http.WebHost.dll
+C:\GitHub\Namrly\Namrly\bin\WebActivatorEx.dll
+C:\GitHub\Namrly\Namrly\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\GitHub\Namrly\Namrly\bin\Newtonsoft.Json.xml
+C:\GitHub\Namrly\Namrly\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\GitHub\Namrly\Namrly\bin\System.Net.Http.Formatting.xml
+C:\GitHub\Namrly\Namrly\bin\System.Web.Http.xml
+C:\GitHub\Namrly\Namrly\bin\System.Web.Http.Cors.xml
+C:\GitHub\Namrly\Namrly\bin\System.Web.Http.WebHost.xml
+C:\GitHub\Namrly\Namrly\obj\Release\Namrly.csprojResolveAssemblyReference.cache
+C:\GitHub\Namrly\Namrly\obj\Release\Namrly.dll
+C:\GitHub\Namrly\Namrly\obj\Release\Namrly.pdb
