@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
@@ -17,10 +18,10 @@ namespace Namrly.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("namrly")]
-        public async System.Threading.Tasks.Task<HttpResponseMessage> GetProductName(bool includeImmatureSuffixes = false)
+        public async Task<HttpResponseMessage> GetProductName(bool includeImmatureSuffixes = false)
         {
-            var envData = await WordProcessor.GetRandomProductName(includeImmatureSuffixes);
-            return Request.CreateResponse(HttpStatusCode.OK, envData);
+            var randomProductName = await WordProcessor.GetRandomProductName(includeImmatureSuffixes);
+            return Request.CreateResponse(HttpStatusCode.OK, randomProductName);
         }
     }
 }
