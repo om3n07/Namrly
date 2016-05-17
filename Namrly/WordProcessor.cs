@@ -5,15 +5,15 @@ namespace Namrly
 {
     public class WordProcessor
     {
-        public static async Task<string> GetRandomProductName(bool includeImmatureSuffixes)
+        public static async Task<string> GetRandomProductName(bool includeAdditionalSuffixes)
         {
             var r = new Random();
             var result = await RandomWordProxy.GetRandomWord(r.Next(0, 15));
 
-            if (includeImmatureSuffixes && r.Next(2) == 0)
+            if (includeAdditionalSuffixes && r.Next(2) == 0)
             {
-                // Be Immature
-                result += (ImmatureSuffixes)r.Next(0, Enum.GetNames(typeof(ImmatureSuffixes)).Length);
+                // For Jon
+                result += (AdditionalSuffixes)r.Next(0, Enum.GetNames(typeof(AdditionalSuffixes)).Length);
             }
             else
             {
@@ -31,7 +31,7 @@ namespace Namrly
         bits,
     }
 
-    enum ImmatureSuffixes
+    enum AdditionalSuffixes
     {
         poop
     }
