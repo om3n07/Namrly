@@ -114,6 +114,9 @@
     <Content Include="packages.config" />
     <Content Include="Metadata\deploymentTemplates\apiappconfig.azureresource.json" />
     <Content Include="apiapp.json" />
+    <Content Include="wordNikCred.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Properties\PublishProfiles\Namrly.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -136,6 +139,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomWordProxy.cs" />
+    <Compile Include="WordnikApi\WordnikResponse.cs" />
     <Compile Include="WordProcessor.cs" />
   </ItemGroup>
   <PropertyGroup>

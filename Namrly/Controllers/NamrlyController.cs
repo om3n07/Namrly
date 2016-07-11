@@ -8,20 +8,26 @@ using System.Web.Http.Cors;
 namespace Namrly.Controllers
 {
     [EnableCors("*", "*", "*")]
-    [RoutePrefix("api/")]
+    [RoutePrefix("api/namrly")]
     public class NamrlyController : ApiController
     {
+        private WordProcessor _wp;
+        public WordProcessor WordProcessor => this._wp ?? (this._wp = new WordProcessor());
+
         /// <summary>
         /// Gets a randomly generated start-up name
         /// </summary>
-        /// <param name="includeImmatureSuffixes"></param>
+        /// <param name="baseWord"></param>
+        /// <param name="includeAdditionalSuffixes"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("namrly")]
-        public async Task<HttpResponseMessage> GetProductName(bool includeImmatureSuffixes = false)
+        public async Task<HttpResponseMessage> GetProductName(string baseWord = null, bool includeAdditionalSuffixes = false)
         {
-            var randomProductName = await WordProcessor.GetRandomProductName(includeImmatureSuffixes);
-            return Request.CreateResponse(HttpStatusCode.OK, randomProductName);
+            string randomProductName;
+            if (baseWord == null) randomProductName = await this.WordProcessor.GetRandomProductName(includeAdditionalSuffixes);
+            else randomProductName = await this.WordProcessor.GetRandomRelatedProductName(baseWord, includeAdditionalSuffixes);
+
+            return this.Request.CreateResponse(HttpStatusCode.OK, randomProductName);
         }
     }
 }
