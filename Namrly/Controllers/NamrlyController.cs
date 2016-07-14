@@ -8,7 +8,7 @@ using System.Web.Http.Cors;
 namespace Namrly.Controllers
 {
     [EnableCors("*", "*", "*")]
-    [RoutePrefix("api/namrly")]
+    [RoutePrefix("api/Namrly")]
     public class NamrlyController : ApiController
     {
         private WordProcessor _wp;
@@ -17,15 +17,43 @@ namespace Namrly.Controllers
         /// <summary>
         /// Gets a randomly generated start-up name
         /// </summary>
+        /// <param name="includeAdditionalSuffixes"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("RandomStartupName")]
+        public async Task<HttpResponseMessage> GetRandomStartupName(bool includeAdditionalSuffixes = false)
+        {
+            var randomProductName = await this.WordProcessor.GetRandomProductName(includeAdditionalSuffixes);
+
+            return this.Request.CreateResponse(HttpStatusCode.OK, randomProductName);
+        }
+
+        /// <summary>
+        /// Gets a startup name related to the base word
+        /// </summary>
         /// <param name="baseWord"></param>
         /// <param name="includeAdditionalSuffixes"></param>
         /// <returns></returns>
         [HttpGet]
-        public async Task<HttpResponseMessage> GetProductName(string baseWord = null, bool includeAdditionalSuffixes = false)
+        [Route("RelatedStartupName")]
+        public async Task<HttpResponseMessage> GetRelatedStartupName(string baseWord, bool includeAdditionalSuffixes = false)
         {
-            string randomProductName;
-            if (baseWord == null) randomProductName = await this.WordProcessor.GetRandomProductName(includeAdditionalSuffixes);
-            else randomProductName = await this.WordProcessor.GetRandomRelatedProductName(baseWord, includeAdditionalSuffixes);
+            var randomProductName = await this.WordProcessor.GetRandomRelatedProductName(baseWord, includeAdditionalSuffixes);
+
+            return this.Request.CreateResponse(HttpStatusCode.OK, randomProductName);
+        }
+
+        /// <summary>
+        /// Gets all randomly generated start-up names from base word
+        /// </summary>
+        /// <param name="baseWord"></param>
+        /// <param name="includeAdditionalSuffixes"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("AllRelatedStartupNames")]
+        public async Task<HttpResponseMessage> GetAllRelatedStartupNames(string baseWord, bool includeAdditionalSuffixes = false)
+        {
+            var randomProductName = await this.WordProcessor.GetAllRelatedProductNames(baseWord, includeAdditionalSuffixes);
 
             return this.Request.CreateResponse(HttpStatusCode.OK, randomProductName);
         }

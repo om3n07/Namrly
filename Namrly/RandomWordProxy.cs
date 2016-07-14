@@ -31,7 +31,7 @@ namespace Namrly
             }
         }
 
-        public async Task<WordnikResponse> GetRandomSynonym(string word)
+        public async Task<WordnikResponse> GetSynonyms(string word)
         {
             using (var client = new HttpClient())
             {

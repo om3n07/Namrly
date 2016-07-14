@@ -71,3 +71,4 @@ C:\GitHub\Namrly\Namrly\bin\System.Web.Http.WebHost.xml
 C:\GitHub\Namrly\Namrly\obj\Release\Namrly.csprojResolveAssemblyReference.cache
 C:\GitHub\Namrly\Namrly\obj\Release\Namrly.dll
 C:\GitHub\Namrly\Namrly\obj\Release\Namrly.pdb
+C:\GitHub\Namrly\Namrly\bin\wordNikCred.txt
