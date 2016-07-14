@@ -1,7 +1,7 @@
 API For generating startup names
 
-Request:
-http://namrly.azurewebsites.net/api/Namrly
+Sample Request:
+http://namrly.azurewebsites.net/api/Namrly/RandomStartupName
 
 Swagger:
-http://namrly.azurewebsites.net/swagger/ui/index#!/Namrly/Namrly_GetProductName
+http://namrly.azurewebsites.net/swagger/ui/index
