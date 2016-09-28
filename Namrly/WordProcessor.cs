@@ -115,6 +115,6 @@ namespace Namrly
 
     enum AdditionalSuffixes
     {
-        chan
+       bon
     }
 }
